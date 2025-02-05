@@ -28,3 +28,8 @@ server:
 mail:
   address:
     admin: admin@gmail.com
+jwt:
+#  외부에서 참조할 수 있다. 우리의 디바이스 OS에 환경변수를 숨김. 실무에서는 parameter를 숨김. 우린 배포를 안했기에 OS에 숨긴다.
+  key: ${JWT_SECRET_KEY}
+  access-token-expiration-minutes: 10
+  refresh-token-expiration-minutes: 420
